@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehinicate Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Garamond">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Garamond', serif;
+            font-weight: 100;
+            background: linear-gradient(
+                to bottom left,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0)
+            ),
+            url('https://img.freepik.com/free-photo/abstract-gradient-neon-lights_23-2149279175.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            font-style: italic;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+            font-style: italic;
+        }
+
+        .navbar a:hover {
+            color: #ff00ff;
+        }
+
+        .main-content {
+            padding-top: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .team-name {
+            font-weight: 500;
+            font-size: 3.5em;
+            color: #ff00ff;
+            margin-bottom: 30px;
+            font-style:bold;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .member {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        .member h3 {
+            font-style: italic;
+        }
+
+        .project-info {
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .project-info h2, 
+        .project-info li {
+            font-style: italic;
+        }
+
+        .graphs-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .graph {
+            width: 30%;
+            min-width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#team">Team</a>
+        <a href="#about">About Project</a>
+        <a href="#graphs">Graphs</a>
+    </nav>
+    <style>
+        .team-name {
+            font-style: normal;
+        }
+    </style>
+
+    <div class="main-content">
+        <section id="team" class="team-section">
+            <h1 class="team-name">Vehnicate</h1>
+            <h2 class="team-subtitle">Team Members</h2>
+            <div class="team-members">
+                <div class="member">
+                    <h3>Sai Siddarth</h3>
+                    <p>Team Lead</p>
+                    <div class="member-details">
+                        <p>Computer Science Engineering</p>
+                        <p>2nd Year ECE</p>
+                        <P>Vehnicate CEO</P>
+                    </div>
+                </div>
+                <div class="member">
+                    <h3>Pragya</h3>
+                    <p>Developer</p>
+                    <div class="member-details">
+                        <p>Computer Science Engineering</p>
+                        <p>2nd Year CSE Core</p>
+                        <p>Vehnicate CW</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <h3>Sowmiya</h3>
+                    <p>Developer</p>
+                    <div class="member-details">
+                        <p>Computer Science Engineering</p>
+                        <p>2nd Year CSE Core</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <h3>Mohammed Fahim</h3>
+                    <p>Developer</p>
+                    <div class="member-details">
+                        <p>Computer Science Engineering</p>
+                        <p>2nd Year CSE Core</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="project-info">
+            <h2>Motion Planning</h2>
+            <ul>
+                <li>Lateral Control (for steering angle): Stanley Controller</li>
+                <li>Longitudinal Control (for throttle): PID Controller</li>
+            </ul>
+        </section>
+        <section id="graphs" class="graphs-container">
+            <div class="widget-container">
+                <style>
+                    .graph-row {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 10px; /* Reduced gap to allow more width */
+                        margin-bottom: 20px;
+                        width: 100%;
+                        overflow-x: auto; /* Allows horizontal scroll if needed */
+                    }
+                    
+                    .graph-row iframe {
+                        flex: 1 1 33%; /* Each iframe takes equal width */
+                        min-width: 400px; /* Minimum width to prevent too much squishing */
+                        height: 400px;
+                    }
+
+                    .widget-container {
+                        width: 95vw; /* Makes container wider */
+                        max-width: 1800px; /* Increased max-width */
+                        margin: 0 auto;
+                        padding: 20px;
+                    }
+                </style>
+                <h2>Acceleration</h2>
+                <style>
+                  .graph-row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                  }
+                  
+                  .graph-row iframe {
+                    flex: 1;
+                    min-width: 0;
+                  }
+                </style>
+                
+                <div class="graph-row">
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/ad603ef0-0f58-11f0-86ac-951bbb28eae1?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/0adf07a0-0f59-11f0-8f83-43727cd6bc90?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/eec12000-0f5b-11f0-9092-2f72379381be?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                </div>
+
+                <h2>Velocity</h2>
+                <style>
+                  .graph-row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                  }
+                  
+                  .graph-row iframe {
+                    flex: 1;
+                    min-width: 0;
+                  }
+                </style>
+                
+                <div class="graph-row">
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/49d85300-0f66-11f0-8f83-43727cd6bc90?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/67f4e970-0f66-11f0-863b-f730addc68ba?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/8b574ac0-0f66-11f0-9092-2f72379381be?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                </div>
+                
+                <h2>Distance</h2>
+                <style>
+                  .graph-row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                  }
+                  
+                  .graph-row iframe {
+                    flex: 1;
+                    min-width: 0;
+                  }
+                </style>
+                
+                <div class="graph-row">
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/12ce6750-0f5c-11f0-86ac-951bbb28eae1?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/452277a0-0f5c-11f0-8f83-43727cd6bc90?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/73c60310-0f5c-11f0-8f83-43727cd6bc90?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                </div>
+
+                <h2>Angle</h2>
+                <style>
+                  .graph-row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                  }
+                  
+                  .graph-row iframe {
+                    flex: 1;
+                    min-width: 0;
+                  }
+                </style>
+                
+                <div class="graph-row">
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/75c04fa0-0f60-11f0-9092-2f72379381be?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/b8af5220-0f60-11f0-b4bd-8b00c50fcae5?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                <iframe 
+                  src="https://thingsboard.cloud/dashboard/d681e740-0f60-11f0-863b-f730addc68ba?publicId=84e30a10-0efa-11f0-8f83-43727cd6bc90"
+                  width="100%" 
+                  height="400px"
+                  style="border:none;">
+                </iframe>
+                </div>
+
+                
+            </div>
+            
+        </section>
+    </div>
+</body>
+
+<footer style="background: rgba(0, 0, 0, 1); padding: 20px; text-align: center; position: relative; bottom: 0; width: calc(100% - 40px); backdrop-filter: blur(10px); box-sizing: border-box;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <div style="width: 30px; height: 30px; border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #fff; font-weight: bold;">©</span>
+        </div>
+        <span style="color: #fff; font-size: 1.2em;">Vehnicate Pvt Ltd</span>
+    </div>
+    <div style="margin-top: 15px;">
+        <a href="https://linkedin.com/company/vehnicate" title="Follow us on LinkedIn" style="color: #fff; text-decoration: none; margin: 0 15px;">
+            <span style="transition: color 0.3s;" onmouseover="this.style.color='#0077b5'" onmouseout="this.style.color='#fff'">LinkedIn</span>
+        </a>
+        <a href="https://instagram.com/vehnicate" title="Follow us on Instagram" style="color: #fff; text-decoration: none; margin: 0 15px;">
+            <span style="transition: color 0.3s;" onmouseover="this.style.color='#e4405f'" onmouseout="this.style.color='#fff'">Instagram</span>
+        </a>
+    </div>
+    <br>
+</footer>
+
+
+</html>
+
+
+
